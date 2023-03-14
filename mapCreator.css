@@ -16,7 +16,7 @@ body {
     background-color: #c8c8c8;
     background-color: #313338;
     border: none;
-    font-size: 80%;
+    font-size: 0.6vw;
 }
 
 
@@ -34,12 +34,10 @@ body {
 
 .blocTileSet {
     height: auto;
-    width: 200px;
     display: flex;
     justify-content: flex-start;
     align-content: center;
     flex-direction: column;
-
     border-radius: 10px;
 }
 
@@ -57,7 +55,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
-    height: 500px;
 }
 
 
@@ -100,7 +97,7 @@ legend {
 }
 
 label {
-    margin: 2% 0;
+    margin: 0.2vw 0;
 
 }
 
@@ -132,7 +129,7 @@ input[type=button] {
     padding: 6px 12px;
     cursor: pointer;
     background-color: #2b2d31;
-    font-size: 100%;
+    font-size: 0.8vw;
 }
 
 input[type=file] {
@@ -425,4 +422,5 @@ input[type="radio"] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0vh;
+    height: 50vh;
 }
