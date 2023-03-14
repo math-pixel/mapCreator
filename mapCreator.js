@@ -106,8 +106,26 @@ document.body.addEventListener("contextmenu", (e) => {
 
 document.getElementById("export").addEventListener("click", () => {
   // export
+  let tempGrid = []
+  let isOK = false;
+  allGrid.forEach(element => {
+    isOK = true
+    element.forEach (elm => {
+      if (isOK){
+        elm.forEach(e => {
+          if (isOK){
+            if (e != 0){
+              isOK = false;
+              tempGrid.push(element)
+              return;
+            }
+          }
+        })
+      }
+    })
+  });
   let dataJSON = {
-    grille: allGrid,
+    grille: tempGrid,
     startX: startX,
     startY: startY,
     nbCarreauX: nb_row,
@@ -118,6 +136,7 @@ document.getElementById("export").addEventListener("click", () => {
     sideYwallpaper: heightCanvas,
     reverseGride: reverseGrid,
   };
+  alert("Pour le groupe de Mathieu pensez à prendre un screen avant de fermer la page !")
   exportToJsonFile(dataJSON);
 });
 
